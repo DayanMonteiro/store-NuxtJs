@@ -27,7 +27,11 @@ export default {
   buildModules: ["@nuxtjs/vuetify"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/axios"],
+
+  axios: {
+    baseURL: "/",
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
