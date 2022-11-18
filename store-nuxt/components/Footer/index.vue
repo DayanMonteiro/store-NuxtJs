@@ -15,7 +15,7 @@ export default {
 <style lang="scss"scoped >
 
   .container{
-    background-color: #A9A9A9;
+    background-color: #BBBBBB;
     height: 5rem;
     width: 100%;
     display: flex;
@@ -25,7 +25,7 @@ export default {
  
 
     h1{
-      color: #444141;
+      color: #666666;
     }
   }
 </style>

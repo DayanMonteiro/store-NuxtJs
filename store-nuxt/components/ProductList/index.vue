@@ -1,13 +1,21 @@
 <template>
   <div class="container">
-    <h1>Lista de Produtos</h1>
+
+    <Card />
 
   </div>
 </template>
 
 <script>
+
+import Card from './Card/index.vue';
+
 export default {
-  name: 'ProductList'
+  name: 'ProductList',
+
+  components: {
+    Card
+  }
 }
 
 </script>
@@ -15,6 +23,12 @@ export default {
 <style lang="scss"scoped >
 
   .container{
+   // background-color: antiquewhite; 
+    height: 100%;
+    width: 57%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
     h1{
       color: #444141;
     }

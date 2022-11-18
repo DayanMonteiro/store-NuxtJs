@@ -2,8 +2,10 @@
   <div>
     <Header />
     <Carousel />
-    <SearchProduct />
-    <ProductList />
+    <div class="contentPage">
+      <SearchProduct />
+      <ProductList />
+    </div>
     <Footer />
 
   </div>
@@ -16,3 +18,14 @@ export default {
 
 }
 </script>
+
+
+<style lang="scss"scoped >
+
+  .contentPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
