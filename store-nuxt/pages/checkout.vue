@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div>
+    <div class="contentForm">
       <CheckoutForm />
     </div>
     <Footer />
@@ -16,4 +16,9 @@
 
 <style lang="scss"scoped >
 
+  .contentForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
