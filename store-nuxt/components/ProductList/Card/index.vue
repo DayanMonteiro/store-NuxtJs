@@ -1,70 +1,32 @@
 <template>
-  <div class="cardsContainer" >
-  <div class="productContainer">
-    <div class="contentImage">
-      <img src="https://www.lenovo.com/medias/ideapad-gaming-3-linux-gen5.png?context=bWFzdGVyfHJvb3R8OTA1MDZ8aW1hZ2UvcG5nfGg3OC9oNDEvMTQ0ODc5OTAyNzIwMzAucG5nfGUxNTM3NzViMzExM2YxYTE1NWRiOGMyYTIyMDM3YzEzMjlhMGE1NWFjZDUwOTU2MWYxZWI5NGMwNTY3YzM0OTE" alt="">
-    </div>
-    <div class="productInfo" >
-      <span>Categoria</span>
-
-      <h3>Nome do produto</h3>
-
-      <p>Descrição - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus repellat sequi alias cupiditate iste laudantium blanditiis assumenda nam?</p>
-
-      <h1>R$ 1.500,00</h1>
-    </div>
-    <button>Adicionar ao Carrinho</button>
-  </div>
 
   <div class="productContainer">
     <div class="contentImage">
-      <img src="https://www.lenovo.com/medias/ideapad-gaming-3-linux-gen5.png?context=bWFzdGVyfHJvb3R8OTA1MDZ8aW1hZ2UvcG5nfGg3OC9oNDEvMTQ0ODc5OTAyNzIwMzAucG5nfGUxNTM3NzViMzExM2YxYTE1NWRiOGMyYTIyMDM3YzEzMjlhMGE1NWFjZDUwOTU2MWYxZWI5NGMwNTY3YzM0OTE" alt="">
+      <img :src="product.imageUrl" alt="">
     </div>
     <div class="productInfo" >
-      <span>Categoria</span>
+      <span>{{product.category}}</span>
 
-      <h3>Nome do produto</h3>
+      <h3>{{product.name}}</h3>
 
-      <p>Descrição - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus repellat sequi alias cupiditate iste laudantium blanditiis assumenda nam?</p>
+      <p>{{product.description}}</p>
 
-      <h1>R$ 1.500,00</h1>
+      <h1>R$ {{product.price}}</h1>
     </div>
     <button>Adicionar ao Carrinho</button>
   </div>
-
-
-  <div class="productContainer">
-    <div class="contentImage">
-      <img src="https://www.lenovo.com/medias/ideapad-gaming-3-linux-gen5.png?context=bWFzdGVyfHJvb3R8OTA1MDZ8aW1hZ2UvcG5nfGg3OC9oNDEvMTQ0ODc5OTAyNzIwMzAucG5nfGUxNTM3NzViMzExM2YxYTE1NWRiOGMyYTIyMDM3YzEzMjlhMGE1NWFjZDUwOTU2MWYxZWI5NGMwNTY3YzM0OTE" alt="">
-    </div>
-    <div class="productInfo" >
-      <span>Categoria</span>
-
-      <h3>Nome do produto</h3>
-
-      <p>Descrição - Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus repellat sequi alias cupiditate iste laudantium blanditiis assumenda nam?</p>
-
-      <h1>R$ 1.500,00</h1>
-    </div>
-    <button>Adicionar ao Carrinho</button>
-  </div>
-</div>
 </template>
 
 <script>
   export default {
-    name: "Card"
+    name: "Card",
+    props: [
+      "product"
+    ]
   }
 </script >
 
 <style lang="scss"scoped  >
-
-  .cardsContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .productContainer{
     background-color: #909090;
     height: 37.5rem;

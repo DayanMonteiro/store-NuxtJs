@@ -280,7 +280,6 @@
 </script>
 
 <style lang="scss"scoped >
-
   .form{
  //   background-color: red;
     margin-top: 8rem;
