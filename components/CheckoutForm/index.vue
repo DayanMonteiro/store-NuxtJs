@@ -40,7 +40,7 @@
            <!-- CAMPO CPF -->
     <div v-bind:class="{ 'fld-error': $v.form.cpf.$error }">
 			<label>CPF*</label><br>
-			<input type="text" class="inputLong" v-model.trim="form.cpf" @input="$v.form.cpf.$touch()">
+			<input  v-mask="'###.###.###-##'"  type="text" class="inputLong" v-model.trim="form.cpf" @input="$v.form.cpf.$touch()">
 
 
 			<span class="msg-error" v-if="!$v.form.cpf.required">
@@ -54,7 +54,7 @@
        <!-- CAMPO DATA DE NASCIMENTO -->
       <div v-bind:class="{ 'fld-error': $v.form.birthDate.$error }">
 			<label>Data de Nascimento*</label><br>
-			<input type="text" class="inputMedium" v-model.trim="form.birthDate" @input="$v.form.birthDate.$touch()">
+			<input  v-mask="'##/##/####'"  type="text" class="inputMedium" v-model.trim="form.birthDate" @input="$v.form.birthDate.$touch()">
 
 
 			<span class="msg-error" v-if="!$v.form.birthDate.required">
@@ -65,7 +65,7 @@
      <!-- CAMPO TELEFONE -->
     <div v-bind:class="{ 'fld-error': $v.form.telephone.$error }">
 			<label>Telefone*</label><br>
-			<input type="text" class="inputMedium" v-model.trim="form.telephone" @input="$v.form.telephone.$touch()">
+			<input  v-mask="['(##) #####-####', '(##) ####-####']"  type="text" class="inputMedium" v-model.trim="form.telephone" @input="$v.form.telephone.$touch()">
 
 
 			<span class="msg-error" v-if="!$v.form.telephone.required">
@@ -90,8 +90,8 @@
    <div class="rightColumn" >
                  <!-- CAMPO CEP -->
     <div v-bind:class="{ 'fld-error': $v.form.cep.$error }">
-			<label>CEP*</label><br>
-			<input type="text" class="inputLong" v-model.trim="form.cep" @input="$v.form.cep.$touch()">
+			<label  >CEP*</label><br>
+			<input v-mask="'##.###-###'" type="text" class="inputLong" v-model.trim="form.cep" @input="$v.form.cep.$touch()">
 
 
 			<span class="msg-error" v-if="!$v.form.cep.required">
@@ -183,8 +183,11 @@
 <script type="text/javascript">
 	import axios from 'axios'
 	import { required, minLength } from 'vuelidate/lib/validators'
+  import {mask} from 'vue-the-mask'
+
 	export default {
     name: "CheckoutForm",
+    directives: {mask},
 
 		data() {
 			return {
