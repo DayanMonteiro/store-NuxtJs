@@ -4,7 +4,9 @@
     <div class="contentForm">
       <CheckoutForm />
     </div>
-    <Footer />
+    <div class="footerCheckoutPage">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -20,5 +22,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+
+  .footerCheckoutPage{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 </style>

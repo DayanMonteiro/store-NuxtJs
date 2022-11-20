@@ -44,13 +44,8 @@ export default {
     }
 
   #search{
-      margin: 1px solid red;
-    //  width: 60rem;
-
       display: flex;
       align-items: center;
-      /* justify-content: space-around; */
-
       margin-left: 1rem;
   }
 
@@ -58,8 +53,6 @@ export default {
 
   #txtSearch{
     float:left;
-  //  background-color:transparent;
-  //  background-color: red;
     padding-left: 1rem;
     font-style:italic;
     font-size:18px;
@@ -74,13 +67,11 @@ export default {
   button{
     background-color: #8e36b7;
     width: 3rem;
-    height: 3.3rem;
-    /* border-radius: 1rem  0 ; */
+    height: 3rem;
     border: none;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     margin-left: -2rem;
-    
   }
 
   img{

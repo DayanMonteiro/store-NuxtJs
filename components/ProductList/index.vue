@@ -16,6 +16,7 @@ import { dataApi } from "../../services/dataApi";
 
 export default {
   name: "ProductList",
+  props: ["cart"],
 
   components: {
     Card,
@@ -112,9 +113,8 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  // background-color: antiquewhite;
   height: 100%;
-  width: 57%;
+  width: 60%;
   margin-top: 5rem;
   margin-bottom: 5rem;
 
@@ -127,9 +127,6 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  background-color: aqua;
-
   flex-wrap: wrap;
 }
 </style>

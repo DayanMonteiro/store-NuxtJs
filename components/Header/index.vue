@@ -1,34 +1,40 @@
 <template>
-  <div class="container" >
+  <div class="containerHeader" >
       <div class="logo">
         <h1 class="logoFirstname" >Mkt</h1>
         <h1 class="logoSecondName">Plance</h1>
       </div>
-      <div class="products" >
+      <a href="/shoppingCart" class="products" >
         <p class="paragraph" >Produtos</p>
         <img class="cart" src="../../resources/icons/shopping-cart.svg" />
         <div class="amount">
+            <!-- <p class="amountProducts" :key="product.id"  v-for="product in cart" >2 
+              {{ cart.length }} 
+            </p> -->
             <p class="amountProducts">2</p>
         </div>
-      </div>
+      </a>
   </div>
 </template>
 
 <script>
 export default {
-name: 'Header'
+  name: 'Header',
+  // props: ["cart"],
 }
 </script>
 
 
 <style lang="scss"scoped >
-  .container{
-    /* background-color: gray; */
+  .containerHeader{
     height: 6rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .logo {
@@ -49,6 +55,8 @@ name: 'Header'
   .products{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-decoration: none;
 
     .paragraph{
       color: #909090;
@@ -72,9 +80,7 @@ name: 'Header'
     }
 
     .amountProducts{
-      color: #FFFFF0;
-    //  margin-top: 0.1rem;
-     // margin-left: 0.2rem;
+      color: #FFFFF0; 
       font-size: 0.7rem;
       font-weight: bold;
       }

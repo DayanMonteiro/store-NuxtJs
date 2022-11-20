@@ -16,7 +16,7 @@
         
    
     </div>
-    <button>Adicionar ao Carrinho</button>
+    <button v-on:click.prevent="saveCart(product)" >Adicionar ao Carrinho</button>
   </div>
 </template>
 
@@ -26,7 +26,7 @@ import {mask} from 'vue-the-mask'
 
 export default {
   name: "Card",
-  props: ["product"],
+  props: ["product", "cartData"],
   directives: {mask},
 
   methods: {
@@ -34,6 +34,10 @@ export default {
 
     return value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
      
+    },
+
+    saveCart(product){
+      this.cartData.push(product)
     }
   }
 };
@@ -44,14 +48,10 @@ export default {
 <style lang="scss" scoped>
 .productContainer {
   background-color: #909090;
- 
   height: 29rem;
-  width: 20rem;
-
+  width: 21rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 1rem;
-
-
 }
 
 .contentImage {
@@ -59,7 +59,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 img{
@@ -78,7 +77,6 @@ img{
   span {
     color: #8a2be2;
     font-weight: bold;
-    /* margin-top: 1rem; */
   }
 
   h3 {
@@ -95,11 +93,6 @@ img{
     color: #434343;
     margin-top: 1rem;
   }
-
-  /* .price {
-    color: #434343;
-    margin-top: 1rem;
-  } */
 }
 
 button {
@@ -115,10 +108,6 @@ button:hover {
   background-color: #8a2be2;
   color: #fff;
 }
-
-
-
-/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
 .description {
   max-height: 10rem;

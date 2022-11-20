@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="containerFooter">
     <h1>MktPlace</h1>
 
   </div>
@@ -14,15 +14,15 @@ export default {
 
 <style lang="scss"scoped >
 
-  .container{
+  .containerFooter{
     background-color: #BBBBBB;
     height: 5rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-
- 
+    margin: 0;
+    padding: 0;
 
     h1{
       color: #666666;
