@@ -5,6 +5,7 @@
         v-for="product in productsList"
         :key="product.id"
         :product="product"
+        @addProduct="addProductToCart"
       />
     </div>
   </div>
@@ -16,7 +17,6 @@ import { dataApi } from "../../services/dataApi";
 
 export default {
   name: "ProductList",
-  props: ["cart"],
 
   components: {
     Card,
@@ -26,46 +26,27 @@ export default {
     return {
       productsList: [],
 
-      products: [
-      {
-        id: 1,
-        name: 'Product 1',
-        description: 'This is an incredibly awesome product',
-        quantity: 0,
-      },
-      {
-        id: 2,
-        name: 'Product 2',
-        description: 'This is an incredibly awesome product',
-        quantity: 0,
-      },
-      {
-        id: 3,
-        name: 'Product 3',
-        description: 'This is an incredibly awesome product',
-        quantity: 0,
-      }
-    ],
-    showCart: false,
-
-
-    cartData: [],
+      cart: [],
     };
+  },
 
+  watch: {
+    cart: {
+      handler(newValue) {
+        localStorage.setItem("cart", JSON.stringify(newValue));
+      },
+      deep: true,
+    },
+    totalQuantity: (value) => {
+      localStorage.setItem("cartItemsQty", value);
+    },
   },
 
   computed: {
-  cart() {
-    cart = JSON.parse(localStorage.setItem('cart', [])); 
-    return this.products.filter(product => product.quantity > 0);
+    totalQuantity() {
+      return this.cart.reduce((total, product) => total + 1, 0);
+    },
   },
-  totalQuantity() {
-    return this.products.reduce(
-      (total, product) => total + product.quantity,
-      0
-    );
-  }
-},
 
   methods: {
     async asyncData() {
@@ -79,34 +60,22 @@ export default {
       }
     },
 
-    updateCart(product, updateType) {      
-    for (let i = 0; i < this.products.length; i++) {
-      if (this.products[i].id === product.id) {
-        if (updateType === 'subtract') {
-          if (this.products[i].quantity !== 0) {
-            this.products[i].quantity--;
-            saveCart();
-          }
-        } else {
-          this.products[i].quantity++;
-          saveCart();
-        }
-        break;
+    addProductToCart(product) {
+      const index = this.cart.findIndex((p) => p.id === product.id);
+
+      if (index === -1) {
+        this.cart.push({ ...product, quantity: 1 });
+      } else {
+        this.cart[index].quantity += 1;
       }
-    }
-  },
-
-  saveCart(products) {
-    localStorage.setItem('cart', JSON.stringify(products));
-  }
-
+    },
+  
   },
 
   mounted() {
     this.asyncData();
-
-    const cartData = localStorage.getItem('cart');
-  this.cartData = cartData ? JSON.parse(cartData) : [];
+    // const cartData = localStorage.getItem("cart");
+    this.cart = JSON.parse(localStorage.getItem("cart")) || [];
   },
 };
 </script>

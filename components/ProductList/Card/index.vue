@@ -8,48 +8,46 @@
 
       <h3>{{ product.name }}</h3>
 
-      <p class="description" >{{ product.description }}</p>
+      <p class="description">{{ product.description }}</p>
 
-      <h1> 
+      <h1>
         {{ formatMoney(product.price) }}
       </h1>
-        
-   
     </div>
-    <button v-on:click.prevent="saveCart(product)" >Adicionar ao Carrinho</button>
+    <button @click.prevent="$emit('addProduct', product)">
+      Adicionar ao Carrinho
+    </button>
   </div>
 </template>
 
 <script>
-
-import {mask} from 'vue-the-mask'
+import { mask } from "vue-the-mask";
 
 export default {
   name: "Card",
   props: ["product", "cartData"],
-  directives: {mask},
+  directives: { mask },
 
   methods: {
     formatMoney(value) {
-
-    return value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
-     
+      return value.toLocaleString("pt-br", {
+        style: "currency",
+        currency: "BRL",
+      });
     },
 
-    saveCart(product){
-      this.cartData.push(product)
-    }
-  }
+    saveCart(product) {
+      this.cartData.push(product);
+    },
+  },
 };
-
-
 </script>
 
 <style lang="scss" scoped>
 .productContainer {
   background-color: #909090;
   height: 29rem;
-  width: 21rem;
+  width: 19.8rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 1rem;
 }
@@ -61,7 +59,7 @@ export default {
   justify-content: center;
 }
 
-img{
+img {
   width: 10rem;
   height: 10rem;
 }
@@ -113,5 +111,4 @@ button:hover {
   max-height: 10rem;
   overflow: auto;
 }
-
 </style>

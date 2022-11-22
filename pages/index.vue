@@ -13,9 +13,23 @@
 </template>
 
 <script>
+  import Header from '../components/Header/index.vue';
+  import Carousel from '../components/Carousel/index.vue';
+  import SearchProduct from '../components/SearchProduct/index.vue';
+  import ProductList from '../components/ProductList/index.vue';
+  import Footer from '../components/Footer/index.vue';
+
+
 export default {
   name: 'IndexPage',
 
+  components: {
+    Header,
+    Carousel,
+    SearchProduct,
+    ProductList,
+    Footer
+  }
 }
 </script>
 

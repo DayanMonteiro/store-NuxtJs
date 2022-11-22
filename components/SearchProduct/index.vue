@@ -10,8 +10,6 @@
      </button>
     </div>
 
-
-
   </div>
 </template>
 
@@ -28,14 +26,9 @@ export default {
     display: flex;
     align-items: center;
     margin-top: 5rem;
-//justify-content: center;
-    /* background-color: red ; */
     width: 57%;
     height: 5.5rem;
-
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-
   }
 
   h2{
