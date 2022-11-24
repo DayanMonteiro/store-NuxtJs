@@ -11,8 +11,14 @@
 </template>
 
 <script>
+import CheckoutForm from '../components/CheckoutForm/index.vue';
+
   export default {
-    name: "checkout"
+    name: "checkout",
+
+    components: {
+      CheckoutForm
+    }
   }
 </script>
 

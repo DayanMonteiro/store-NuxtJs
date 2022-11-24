@@ -191,7 +191,7 @@ import { required } from "vuelidate/lib/validators";
 import { mask } from "vue-the-mask";
 
 export default {
-  name: "CheckoutForm",
+  name: "CheckoutFormMobile",
 
   directives: { mask },
 
@@ -300,22 +300,56 @@ export default {
 
 .containerForm {
   display: flex;
-  flex-direction: row;
-  width: 62rem;
   justify-content: space-between;
   font-family: 'SoucerSansPro-Regular';
+
+  @media only screen and (min-width: 360px) {
+    width: 20rem ;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 640px) {
+    width: 30rem ;
+  }
+
+  @media only screen and (min-width: 910px) {
+    width: 38rem ;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 42rem;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    width: 50rem;
+  }
+
+  @media only screen and (min-width: 1640px) {
+    width: 58rem;
+  }
+
+  @media only screen and (min-width: 1780px) {
+    width: 65rem;
+  } 
+
 }
 
 .leftColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  @media only screen and (min-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .rightColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+
+  @media only screen and (min-width: 1080px) {
+    display: flex;
+    flex-direction: column; 
+  }
 }
 .inputLong {
   float: left;
@@ -324,10 +358,38 @@ export default {
   padding-left: 1rem;
   font-style: italic;
   font-size: 18px;
-  border: none;
-  height: 3rem;
-  width: 30rem;
+  height: 2.5rem;
+  border-radius: 0.2rem;
   border: 1px solid gray;
+
+  @media only screen and (min-width: 360px) {
+    width: 20rem;
+  }
+
+  @media only screen and (min-width: 640px) {
+    width: 30rem;
+  }
+
+  @media only screen and (min-width: 910px) {
+   width: 38rem;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    width: 20rem;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    width: 24rem;
+  }
+
+  @media only screen and (min-width: 1640px) {
+    width: 28rem;
+  }
+
+  @media only screen and (min-width: 1780px) {
+    width: 31rem;
+  }
+
 }
 
 .inputXMedium {
@@ -337,10 +399,38 @@ export default {
   padding-left: 1rem;
   font-style: italic;
   font-size: 18px;
-  border: none;
-  height: 3rem;
-  width: 19rem;
+  height: 2.5rem;
+  border-radius: 0.2rem;
   border: 1px solid gray;
+
+  @media only screen and (min-width: 360px) {
+    width: 11rem;
+  }
+
+  @media only screen and (min-width: 640px) {
+    width: 17rem;
+  }
+
+  @media only screen and (min-width: 910px) {
+    width: 25rem;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    width: 11rem;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    width: 15rem;
+  }
+
+  @media only screen and (min-width: 1640px) {
+    width: 19rem;
+  }
+
+  @media only screen and (min-width: 1780px) {
+    width: 19.7rem;
+  }
+
 }
 .inputMedium {
   float: left;
@@ -349,10 +439,40 @@ export default {
   padding-left: 1rem;
   font-style: italic;
   font-size: 18px;
-  border: none;
-  height: 3rem;
-  width: 14rem;
+  height: 2.5rem;
+  border-radius: 0.2rem;
   border: 1px solid gray;
+
+  @media only screen and (min-width: 360px) {
+   // background-color: yellow;
+    width: 9rem;
+  }
+
+
+  @media only screen and (min-width: 640px) {
+    width: 14rem;
+  }
+
+  @media only screen and (min-width: 910px) {
+    width: 18rem;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    width: 9rem;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    width: 11rem;
+  }
+
+  @media only screen and (min-width: 1640px) {
+    width: 13rem;
+  }
+
+  @media only screen and (min-width: 1780px) {
+   width: 14.7rem;
+  }
+
 }
 
 .inputSmall {
@@ -362,10 +482,26 @@ export default {
   padding-left: 1rem;
   font-style: italic;
   font-size: 18px;
-  border: none;
-  height: 3rem;
-  width: 9rem;
+  height: 2.5rem;
+  border-radius: 0.2rem;
   border: 1px solid gray;
+
+  @media only screen and (min-width: 360px) {
+    width: 7rem;
+  }
+
+  @media only screen and (min-width: 640px) {
+    width: 11rem;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    width: 7rem;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    width: 10rem;
+  }
+
 }
 
 .towInputs {
