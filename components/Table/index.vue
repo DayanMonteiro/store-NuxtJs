@@ -1,7 +1,7 @@
 <template>
   <div class="container" v-if="cartProducts.length > 0">
-    <div>
-      <table class="contentTable">
+    <div class="contenteTable">
+      <table>
         <thead class="contentSection">
           <tr class="bottomLine">
             <th class="smallColumn"></th>
@@ -85,7 +85,8 @@
         >
       </div>
     </div>
-    <div class="checkout">
+
+    <div class="finalConfirmation">
       <button class="cleanCart">
         <img src="../../resources/icons/garbage.svg" />
         <p>Limpar carrinho</p>
@@ -139,13 +140,34 @@ export default {
   font-family: 'SoucerSansPro-Regular';
   src: url('../../resources/fonts/SourceSansPro-Regular.ttf') format('truetype');
 }
-.contentSection {
-  height: 3rem;
-}
+
 .container {
   padding: 0;
   margin: 0;
-  width: 58%;
+
+  @media only screen and (min-width: 910px) {
+    width: 95%;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    width: 78%;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    width: 61%;
+  }
+
+  @media only screen and (min-width: 1780px) {
+    width: 58%; 
+  }
+}
+
+.contenteTable{
+  overflow-x: auto;
+}
+
+.contentSection {
+  height: 3rem;
 }
 
 .iconSmall {
@@ -251,7 +273,6 @@ td {
     font-weight: bold;
     color: #474747;
     font-family: 'SoucerSansPro-Bold';
-
   }
 
   span {
@@ -286,18 +307,40 @@ td {
   }
 }
 
-.purchase {
-  background-color: #8d36b8;
-  color: #fff;
-  width: 15rem;
-  height: 3rem;
-  font-weight: bold;
-  border-radius: 0.2rem;
-}
 
-.purchase:hover {
-  background-color: #fff;
-  color: #8a2be2;
+.finalConfirmation {
+  display: flex;
+  margin-top: 3rem;
+
+
+  @media only screen and (min-width: 360px) {
+      flex-direction: column; 
+      justify-content: center;
+  }
+
+  @media only screen and (min-width: 910px) {
+     flex-direction: row; 
+     justify-content: space-between; 
+  }
+
+}
+.containerButton {
+  display: flex;
+  font-family: 'SoucerSansPro-Regular'; 
+
+  @media only screen and (min-width: 360px) {
+      flex-direction: column; 
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+  }
+
+  @media only screen and (min-width: 910px) {
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 31rem;
+  }
+
 }
 
 .continueShopping {
@@ -307,42 +350,53 @@ td {
   height: 3rem;
   font-weight: bold;
   border-radius: 0.2rem;
+  margin-bottom: 1rem;
 }
+
 .continueShopping:hover {
   background-color: #8d36b8;
   color: #fff;
+}
+
+.purchase {
+  background-color: #8d36b8;
+  color: #fff;
+  width: 15rem;
+  height: 3rem;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.purchase:hover {
+  background-color: #fff;
+  color: #8a2be2;
 }
 
 .cleanCart {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
 
   p {
     color: #626262;
     font-family: 'SoucerSansPro-Regular'; 
   }
+
+  @media only screen and (min-width: 360px) {
+      justify-content: center;
+  }
+
+  @media only screen and (min-width: 910px) {
+    justify-content: flex-start;    
+  }
+
 }
 
 img {
   width: 1rem;
   margin-right: 0.5rem;
   cursor: pointer;
-}
-.checkout {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 3rem;
-}
-
-.containerButton {
-  display: flex;
-  justify-content: space-between;
-  width: 31rem;
-  margin-bottom: 2rem;
-  font-family: 'SoucerSansPro-Regular'; 
 }
 
 </style>

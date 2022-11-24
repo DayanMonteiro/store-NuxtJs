@@ -62,6 +62,7 @@ export default {
   width: 19rem;
 }
 
+
 .contentImage {
   background-color: #fff;
   display: flex;
@@ -128,4 +129,5 @@ button:hover {
   max-height: 10rem;
   overflow: auto;
 }
+
 </style>

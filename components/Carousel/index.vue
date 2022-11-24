@@ -57,37 +57,23 @@ export default {
   font-family: 'SoucerSansPro-Regular';
   src: url('../../resources/fonts/SourceSansPro-Regular.ttf') format('truetype');
 }
-
-  .container{
-
-
-
-    /* h1{
-      color: #444141;
-    } */
-  }
   
-    .carousel1{
-      background-image: linear-gradient( to right, #8A2BE2, #E6BAFA);
-    }
+.carousel1{
+  background-image: linear-gradient( to right, #8A2BE2, #E6BAFA);
+}
 
-    .carousel2{
-      background-image: linear-gradient( to right, #8A2BE2, #E6BAFA);
-    }
+.carousel2{
+  background-image: linear-gradient( to right, #8A2BE2, #E6BAFA);
+}
 
-
-    .textContent {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      margin-top: 12rem;
-    //  margin-right: 26rem;
- 
-
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 12rem;
 
   @media only screen and (min-width: 360px) {
     margin-right: 3rem;
-    
   }
 
   @media only screen and (min-width: 640px) {
@@ -97,7 +83,6 @@ export default {
   @media only screen and (min-width: 910px) {
     margin-right: 10rem;
   }
-
 
   @media only screen and (min-width: 1080px) {
     margin-right: 12rem;
@@ -110,18 +95,14 @@ export default {
   @media only screen and (min-width: 1780px) {
     margin-right: 22rem;
   }
-    }
-    .txtTitle{
-      color: #fff;
-    //  font-size: 5rem;
-      /* font-weight: bold; */
-      font-family: 'SoucerSansPro-Black';
-    //  font-family: 'SoucerSansPro-Bold';
 
-
+}
+.txtTitle{
+  color: #fff;
+  font-family: 'SoucerSansPro-Black';
+ 
   @media only screen and (min-width: 360px) {
-    font-size: 2rem;
-    
+    font-size: 2rem;  
   }
 
   @media only screen and (min-width: 640px) {
@@ -132,31 +113,14 @@ export default {
     font-size: 4rem;
   }
 
+}
 
-  @media only screen and (min-width: 1080px) {
-    
-  }
-
-  @media only screen and (min-width: 1360px) {
-    
-  }
-
-  @media only screen and (min-width: 1780px) {
-    
-  }
-      
-
-    }
-
-    .txtSubTitle{
-      color: #fff;
-     // font-size: 2.5rem;
-     font-family: 'SoucerSansPro-Black';
-
+.txtSubTitle{
+  color: #fff;
+  font-family: 'SoucerSansPro-Black';
 
   @media only screen and (min-width: 360px) {
-    font-size: 1rem;
-    
+    font-size: 1rem; 
   }
 
   @media only screen and (min-width: 640px) {
@@ -167,17 +131,5 @@ export default {
     font-size: 2rem;
   }
 
-
-  @media only screen and (min-width: 1080px) {
-    
-  }
-
-  @media only screen and (min-width: 1360px) {
-    
-  }
-
-  @media only screen and (min-width: 1780px) {
-    
-  }
-    }
+}
 </style>

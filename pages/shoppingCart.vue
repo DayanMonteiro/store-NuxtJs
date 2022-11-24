@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+      <Header />
     <div>
       <div class="containerTable">
         <Table :cartProducts="cartProducts" />
@@ -39,9 +39,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .containerTable {
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   position: relative;
@@ -50,6 +51,5 @@ export default {
 .footerShoppingCartPage {
   position: absolute;
   width: 100%;
-  bottom: 0;
 }
 </style>
