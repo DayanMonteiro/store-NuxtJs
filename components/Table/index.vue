@@ -21,8 +21,8 @@
               <img class="iconSmall" src="../../resources/icons/garbage.svg" />
             </td>
             <td class="bigColumn">
-              <span>{{ product.category }}</span>
-              <p>{{ product.name }}</p>
+                <span>{{ product.category }}</span>
+              <p class="nameTable" >{{ product.name }}</p>
             </td>
             <td class="bigColumn">
               <div class="quantityCounter">
@@ -32,14 +32,18 @@
               </div>
             </td>
             <td class="bigColumn">
-              <b> {{ formatMoney(product.price) }}</b> à vista <br />
-              ou 10x {{ formatMoney(product.price / 10) }}
+              <div class="price">
+                <b> {{ formatMoney(product.price) }}</b> à vista <br />
+                ou 10x  {{ formatMoney(product.price / 10) }}
+              </div>
             </td>
             <td class="mediumColumn">
+              <div class="price">
               <b> {{ formatMoney(product.price * product.quantity) }}</b> à
               vista <br />
               ou 10x
               {{ formatMoney((product.price * product.quantity) / 10) }}
+            </div>
             </td>
           </tr>
         </tbody>
@@ -124,6 +128,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@font-face {
+  font-family: 'SoucerSansPro-Black';
+  src: url('../../resources/fonts/SourceSansPro-Black.ttf') format('truetype');
+
+  font-family: 'SoucerSansPro-Bold';
+  src: url('../../resources/fonts/SourceSansPro-Bold.ttf') format('truetype');
+
+  font-family: 'SoucerSansPro-Regular';
+  src: url('../../resources/fonts/SourceSansPro-Regular.ttf') format('truetype');
+}
 .contentSection {
   height: 3rem;
 }
@@ -133,26 +148,48 @@ export default {
   width: 58%;
 }
 
+.iconSmall {
+  width: 1rem;
+  margin-top: 1.5rem;
+}
+
+.smallColumn {
+  width: 2rem;
+}
+
+.mediumColumn {
+  width: 18.5rem;
+  padding-left: 0;
+}
+
+.bigColumn {
+  width: 35rem;
+}
+
 th {
   text-transform: uppercase;
   color: #474747;
   text-align: left;
   padding-left: 1rem;
+  font-family: 'SoucerSansPro-Black';
 }
 
 td {
   color: #434343;
   padding-left: 1rem;
-  height: 6rem;
+  height: 6.2rem;
 
   span {
     color: #8d36b8;
+    font-weight: bold;
+    font-family: 'SoucerSansPro-Regular';
+    font-size: 0.8rem;
   }
 
   p {
     width: 10rem;
-    text-transform: uppercase;
     font-weight: bold;
+    margin-top: 0.5rem;
   }
 }
 
@@ -162,6 +199,7 @@ td {
   align-items: center;
   justify-content: center;
   width: 5.5rem;
+  margin-top: 1.5rem;
 }
 
 .subtraction {
@@ -183,28 +221,17 @@ td {
   border-top: 1px solid #868686;
   border-bottom: 1px solid #868686;
   height: 1.7rem;
+  margin-bottom: 0.5rem;
 }
 
-.iconSmall {
-  width: 0.8rem;
-}
-
-.smallColumn {
-  width: 2rem;
-}
-
-.mediumColumn {
-  width: 20rem;
-  padding-left: 0;
-}
-
-.bigColumn {
-  width: 35rem;
-}
 .bottomLine {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 0px 0px;
 }
 
+  .price{
+    font-family: 'SoucerSansPro-Regular';
+    margin-top: 1.5rem;
+  }
 .finalPrice {
   display: flex;
   flex-direction: column;
@@ -214,7 +241,7 @@ td {
 }
 
 .cashPayment {
-  width: 20rem;
+  width: 21rem;
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -223,18 +250,22 @@ td {
     text-transform: uppercase;
     font-weight: bold;
     color: #474747;
+    font-family: 'SoucerSansPro-Bold';
+
   }
 
   span {
     color: #8d36b8;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-left: 3rem;
+    margin-left: 3.5rem;
+    font-family: 'SoucerSansPro-Bold';
+
   }
 }
 
 .paymentInstallments {
-  width: 20rem;
+  width: 21rem;
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -245,10 +276,13 @@ td {
     text-transform: uppercase;
     font-weight: bold;
     color: #474747;
+    font-family: 'SoucerSansPro-Bold'; 
   }
 
   span {
     color: #474747;
+    margin-left: 1rem;
+    font-family: 'SoucerSansPro-Regular'; 
   }
 }
 
@@ -287,6 +321,7 @@ td {
 
   p {
     color: #626262;
+    font-family: 'SoucerSansPro-Regular'; 
   }
 }
 
@@ -307,5 +342,7 @@ img {
   justify-content: space-between;
   width: 31rem;
   margin-bottom: 2rem;
+  font-family: 'SoucerSansPro-Regular'; 
 }
+
 </style>

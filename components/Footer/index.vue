@@ -14,6 +14,11 @@ export default {
 
 <style lang="scss"scoped >
 
+@font-face {
+    font-family: 'SoucerSansPro-Black';
+    src: url('../../resources/fonts/SourceSansPro-Black.ttf') format('truetype');
+  }
+
   .containerFooter{
     background-color: #BBBBBB;
     height: 5rem;
@@ -26,6 +31,7 @@ export default {
 
     h1{
       color: #666666;
+      font-family: 'SoucerSansPro-Black';
     }
   }
 </style>

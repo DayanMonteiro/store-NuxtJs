@@ -44,12 +44,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@font-face {
+  font-family: 'SoucerSansPro-Black';
+  src: url('../../../resources/fonts/SourceSansPro-Black.ttf') format('truetype');
+
+  font-family: 'SoucerSansPro-Bold';
+  src: url('../../../resources/fonts/SourceSansPro-Bold.ttf') format('truetype');
+
+  font-family: 'SoucerSansPro-Regular';
+  src: url('../../../resources/fonts/SourceSansPro-Regular.ttf') format('truetype');
+}
 .productContainer {
   background-color: #909090;
-  height: 29rem;
-  width: 19.8rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 1rem;
+  width: 19rem;
 }
 
 .contentImage {
@@ -75,25 +85,32 @@ img {
   span {
     color: #8a2be2;
     font-weight: bold;
+    font-family: 'SoucerSansPro-Bold';
   }
 
   h3 {
     color: #434343;
     margin-top: 1rem;
+    font-family: 'SoucerSansPro-Bold';
   }
 
   p {
     color: #909090;
     margin-top: 1rem;
+    font-family: 'SoucerSansPro-Regular';
   }
 
   h1 {
     color: #434343;
     margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: 'SoucerSansPro-Bold';
   }
 }
 
 button {
+  font-family: 'SoucerSansPro-Bold';
+  font-weight: bold;
   background-color: #fff;
   color: #8a2be2;
   width: 100%;

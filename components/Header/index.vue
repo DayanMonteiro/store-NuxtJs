@@ -31,6 +31,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @font-face {
+    font-family: 'SoucerSansPro-Black';
+    src: url('../../resources/fonts/SourceSansPro-Black.ttf') format('truetype');
+
+    font-family: 'SoucerSansPro-Bold';
+    src: url('../../resources/fonts/SourceSansPro-Bold.ttf') format('truetype');
+
+    font-family: 'SoucerSansPro-Regular';
+    src: url('../../resources/fonts/SourceSansPro-Regular.ttf') format('truetype');
+  }
+
+
 .containerHeader {
   height: 6rem;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 0px 0px;
@@ -49,11 +61,12 @@ export default {
 
   .logoFirstname {
     color: #909090;
+    font-family: 'SoucerSansPro-Black';
   }
 
   .logoSecondName {
     color: #8e36b7;
-   
+    font-family: 'SoucerSansPro-Black';
   }
 }
 
@@ -71,6 +84,7 @@ export default {
   .paragraph {
     color: #909090;
     margin-right: 1.5rem;
+    font-family: 'SoucerSansPro-Regular';
   }
 
   .cart {

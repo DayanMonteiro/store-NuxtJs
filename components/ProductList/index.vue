@@ -82,20 +82,47 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  height: 100%;
-  width: 60%;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
 
-  h1 {
-    color: #444141;
+  @media only screen and (min-width: 360px) {
+    width: 100%;
   }
+
+  @media only screen and (min-width: 640px) {
+    width: 69%;
+  }
+
+  @media only screen and (min-width: 910px) {
+    width: 65%;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    width: 68%;
+  }
+
+  @media only screen and (min-width: 1360px) {
+    width: 62%;
+  }
+
+  @media only screen and (min-width: 1780px) {
+    width: 60%;
+  }
+
 }
 
 .cardsContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+
+  @media only screen and (min-width: 360px) {
+    justify-content: center;
+  }
+
+  @media only screen and (min-width: 1080px) {
+    justify-content: space-between; 
+  }
+ 
 }
 </style>

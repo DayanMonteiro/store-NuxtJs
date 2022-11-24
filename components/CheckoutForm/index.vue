@@ -288,6 +288,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+@font-face {
+    font-family: 'SoucerSansPro-Regular';
+    src: url('../../resources/fonts/SourceSansPro-Regular.ttf') format('truetype');
+  }
 .form {
   margin-top: 8rem;
   margin-bottom: 8rem;
@@ -298,6 +303,7 @@ export default {
   flex-direction: row;
   width: 62rem;
   justify-content: space-between;
+  font-family: 'SoucerSansPro-Regular';
 }
 
 .leftColumn {
@@ -389,8 +395,8 @@ button {
   color: #fff;
   width: 20rem;
   height: 3rem;
-  font-weight: bold;
   border-radius: 0.2rem;
   margin-top: 0.1rem;
+  font-family: 'SoucerSansPro-Regular';
 }
 </style>
